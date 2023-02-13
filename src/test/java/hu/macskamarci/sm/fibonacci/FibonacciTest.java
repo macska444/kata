@@ -1,4 +1,4 @@
-package hu.sm.fibonacci;
+package hu.macskamarci.sm.fibonacci;
 
 import org.testng.annotations.Test;
 

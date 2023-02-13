@@ -1,4 +1,4 @@
-package hu.sm.feladatok;
+package hu.macskamarci.sm.feladatok;
 
 public class F13 {
 

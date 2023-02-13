@@ -1,4 +1,4 @@
-package hu.sm.feladatok;
+package hu.macskamarci.sm.feladatok;
 
 import org.junit.jupiter.api.Test;
 import org.testng.annotations.Ignore;
