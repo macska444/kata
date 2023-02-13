@@ -1,4 +1,4 @@
-package hu.macskamarci.macska;
+package hu.macskamarci.macska.f13;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package hu.macskamarci.macska;
+package hu.macskamarci.macska.f13;
 
 public class F13QuadraticFormula {
     public static void main(String[] args) {
