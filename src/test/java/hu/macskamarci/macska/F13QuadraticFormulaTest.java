@@ -5,13 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Macs13Test {
+public class F13QuadraticFormulaTest {
 
-    private Macs13 calculator;
+    private F13QuadraticFormula calculator;
 
     @Before
     public void setUp() {
-        calculator = new Macs13();
+        calculator = new F13QuadraticFormula();
     }
 
     @Test
