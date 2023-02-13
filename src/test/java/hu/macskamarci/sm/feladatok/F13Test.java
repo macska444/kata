@@ -1,40 +1,37 @@
 package hu.macskamarci.sm.feladatok;
 
-import org.junit.jupiter.api.Test;
-import org.testng.annotations.Ignore;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-class F13Test {
+
+public class F13Test {
 
     //https://www.nkp.hu/tankonyv/matematika_10_1_nat2020/lecke_05_032
 
     @Test
-    void getMasodfukuEgyenlet() {
-        F13.getMasodfukuEgyenlet(6, -7,0);
-        assertEquals(F13.megoldasEslo, 0);
-        assertEquals(F13.megoldasMasodik, 1.1666666666666667);
+    public void getMasodfukuEgyenlet() {
+        F13.getMasodfukuEgyenlet(6, -7, 0);
+        assertEquals(0, F13.megoldasEslo, 0);
+        assertEquals(1.1666666666666667, F13.megoldasMasodik, 0.0001);
     }
 
     @Test
-    void getMasodfukuEgyenlet1() {
-        F13.getMasodfukuEgyenlet(1, -22,85);
-        assertEquals(F13.megoldasEslo, 5);
-        assertEquals(F13.megoldasMasodik, 17);
+    public void getMasodfukuEgyenlet1() {
+        F13.getMasodfukuEgyenlet(1, -22, 85);
+        assertEquals(5, F13.megoldasEslo, 0);
+        assertEquals(17, F13.megoldasMasodik, 0);
     }
 
-    @Ignore
-    @Test
-    void getMasodfukuEgyenlet2() {
-        F13.getMasodfukuEgyenlet(5, -14,34);
-        assertEquals(F13.megoldasEslo, 1);
-        assertEquals(F13.megoldasMasodik, 1.8);
+    @Test(expected = NincsValosMegoldasException.class)
+    public void getMasodfukuEgyenlet2() {
+        F13.getMasodfukuEgyenlet(5, -14, 34);
     }
 
     @Test
-    void getMasodfukuEgyenlet3() {
-        F13.getMasodfukuEgyenlet(11, -5,-34);
-        assertEquals(F13.megoldasEslo, 1.5454545454545454);
-        assertEquals(F13.megoldasMasodik, 2);
+    public void getMasodfukuEgyenlet3() {
+        F13.getMasodfukuEgyenlet(11, -5, -34);
+        assertEquals(-1.5454545454545454, F13.megoldasEslo, 0.0001);
+        assertEquals(2, F13.megoldasMasodik, 0);
     }
 }

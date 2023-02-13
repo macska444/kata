@@ -1,10 +1,10 @@
 package hu.macskamarci.sm.fibonacci;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class FibonacciTest {
 
