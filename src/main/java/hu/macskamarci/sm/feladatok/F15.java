@@ -1,4 +1,4 @@
-package hu.macskamarci.sm.feladatok.f13;
+package hu.macskamarci.sm.feladatok;
 
 import java.io.IOException;
 import java.nio.file.Files;
