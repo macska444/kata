@@ -1,4 +1,4 @@
-package hu.idom.tomlekweb.controller;
+package hu.macskamarci.sm.feladatok.f13;
 
 import java.io.IOException;
 import java.nio.file.Files;
