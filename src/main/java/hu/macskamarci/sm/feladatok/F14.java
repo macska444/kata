@@ -1,4 +1,4 @@
-package hu.idom.jarmu.tomlek.core.scheduler;
+package hu.macskamarci.sm.feladatok;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ public class F14 {
         System.out.println("Van nagyobb eltérés mint 10: " + getAtlagtol10NagyobbElteres(lista));
     }
 
-    private static boolean getAtlagtol10NagyobbElteres(List<Double> lista) {
+    static boolean getAtlagtol10NagyobbElteres(List<Double> lista) {
         Double max = Double.valueOf(0);
         Double sum = Double.valueOf(0);
-        for (Double s:
+        for (Double s :
                 lista) {
             sum += s;
             if (max < s) {
