@@ -1,21 +1,22 @@
 package hu.macskamarci.macska.fibonocci;
 
+import org.apache.commons.lang.time.StopWatch;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigInteger;
-import java.time.Duration;
-import java.time.Instant;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class FibTest {
 
-    private Fib fib;
+public class FibRecursiveTest
+
+{
+    private FibRecursive fibRecursive;
 
     @Before
     public void setUp() {
-        fib = new Fib();
+        fibRecursive = new FibRecursive();
 
     }
 
@@ -23,7 +24,7 @@ public class FibTest {
     public void Fib0Test() {
         BigInteger result;
         BigInteger expected;
-        result = fib.calculate( 0);
+        result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,0, 0);
         expected = BigInteger.ZERO;
         assertEquals(expected, result);
     }
@@ -32,7 +33,7 @@ public class FibTest {
     public void FibFirstTest() {
         BigInteger result;
         BigInteger expected;
-        result = fib.calculate( 1);
+        result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,1, 0);
         expected = BigInteger.ONE;
         assertEquals(expected, result);
     }
@@ -41,7 +42,7 @@ public class FibTest {
     public void Fib2ndTest() {
         BigInteger result;
         BigInteger expected;
-        result = fib.calculate( 2);
+        result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,2, 0);
         expected = BigInteger.ONE;
         assertEquals(expected, result);
     }
@@ -50,7 +51,7 @@ public class FibTest {
     public void Fib3rdTest() {
         BigInteger result;
         BigInteger expected;
-        result = fib.calculate( 3);
+        result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,3, 0);
         expected = BigInteger.TWO;
         assertEquals(expected, result);
     }
@@ -59,20 +60,20 @@ public class FibTest {
     public void Fib5thTest() {
         BigInteger result;
         BigInteger expected;
-        result = fib.calculate( 5);
+        result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,5, 0);
         expected = BigInteger.valueOf(5);
         assertEquals(expected, result);
     }
 
     @Test
     public void Fib99thTest() {
-        Instant start = Instant.now();
-        BigInteger result;
+        StopWatch watch = new StopWatch();
+        watch.start();
+        // call to the methods you want to benchmark
         BigInteger expected;
-        result = fib.calculate( 99);
-        Instant end = Instant.now();
-        Duration timeElapsed = Duration.between(start, end);
-        System.out.println("Duration: " + timeElapsed.toNanos());
+        BigInteger result = fibRecursive.calculate(BigInteger.ONE, BigInteger.ZERO,9999, 0);
+        watch.stop();
+        System.out.println("Duration: " + watch.getTime());
         expected = new BigInteger("218922995834555169026");
         assertEquals(expected, result);
     }
